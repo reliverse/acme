@@ -1,7 +1,6 @@
 {
   "dictionaries": [],
   "ignorePaths": [
-    ".astro",
     "**/*.lock",
     "**/*.txt",
     "build",
@@ -31,6 +30,10 @@
     "redrun",
     "Relivator",
     "reliverse",
+    "subdir",
+    "testdir",
+    "testfile",
+    "testfolder",
     "tsup",
     "typecheck",
     "venv",

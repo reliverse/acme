@@ -1,3 +1,5 @@
+# 👉 py readmeGenerator.py
+
 import os
 
 # Boolean variable to control whether to prompt for the output directory
@@ -18,16 +20,16 @@ For detailed usage instructions, API documentation, and examples, please visit t
 
 ## Installation
 
-To install this package, run:
+To install or update this package, run:
 
 ```bash
-pnpm add @reliverse/{package_name}
+pnpm add @reliverse/{package_name}@latest
 ```
 
 or with Bun:
 
 ```bash
-bun add @reliverse/{package_name}
+bun add @reliverse/{package_name}@latest
 ```
 
 ## How to Use This Library
@@ -122,16 +124,14 @@ def remove_script():
         os.remove(script_path)
         print(
             "\n- Please open the README.md file and make any additional changes."
-            "\n- The readmeGenerator.py script has been deleted."
-            "\n- Remember to also remove 'readmeGenerator.py' from the 'files' array in your package.json file.\n"
+            "\n- The readmeGenerator.py script has been deleted.\n"
         )
 
     else:
         print(
             "\n- Please open the README.md file and make any additional changes."
             "\n- The readmeGenerator.py script was not deleted."
-            "\n- Please remove the readmeGenerator.py file manually before publishing the package."
-            "\n- Remember to also remove 'readmeGenerator.py' from the 'files' array in your package.json file.\n"
+            "\n- Please remove the readmeGenerator.py file manually before publishing the package.\n"
         )
 
 

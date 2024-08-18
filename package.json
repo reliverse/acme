@@ -1,11 +1,13 @@
 {
   "name": "@reliverse/acme",
-  "version": "0.1.0",
+  "author": "reliverse",
+  "version": "0.2.0",
+  "type": "module",
   "description": "@reliverse/acme is a @reliverse/addons template that provides a starting point for developing new packages within the Reliverse ecosystem, offering pre-configured setup and guidelines to streamline the creation of consistent, high-quality packages.",
   "scripts": {
     "appts": "redrun knip lint format typecheck test build",
-    "build": "tsup src --format esm --dts --minify",
-    "ci": "pnpm lint:eslint && pnpm typecheck && pnpm build",
+    "build": "tsup",
+    "ci": "pnpm lint:eslint && pnpm typecheck && pnpm test && pnpm build",
     "dev:eslint": "pnpm eslint --inspect-config",
     "dev": "vitest",
     "format:biome": "biome format --write .",
@@ -15,12 +17,11 @@
     "lint:biome": "biome lint --write .",
     "lint:eslint": "eslint --cache --fix .",
     "lint": "redrun lint:eslint lint:biome",
-    "pub:ngc": "pnpm publish --access public --no-git-checks",
     "pub": "pnpm publish --access public",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },
-  "files": ["dist", "readmeGenerator.py"],
+  "files": ["dist"],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -29,22 +30,20 @@
   },
   "types": "./dist/index.d.ts",
   "main": "dist/index.js",
-  "keywords": ["reliverse", "addons"],
-  "type": "module",
-  "author": "reliverse",
+  "keywords": ["reliverse", "addons", "template"],
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
     "@changesets/cli": "^2.27.7",
     "@eslint/js": "^9.9.0",
+    "@total-typescript/ts-reset": "^0.5.1",
     "@types/eslint__js": "^8.42.3",
-    "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.3.0",
     "eslint": "^9.9.0",
     "knip": "^5.27.2",
     "redrun": "^11.0.5",
+    "terser": "^5.31.6",
     "tsup": "^8.2.4",
-    "tsx": "^4.17.0",
     "typescript": "5.6.0-beta",
     "typescript-eslint": "^8.1.0",
     "vitest": "^2.0.5"
@@ -60,9 +59,5 @@
       }
     }
   },
-  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247",
-  "dependencies": {
-    "fs-extra": "^11.2.0",
-    "pathe": "^1.1.2"
-  }
+  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247"
 }

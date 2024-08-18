@@ -10,16 +10,16 @@ For detailed usage instructions, API documentation, and examples, please visit t
 
 ## Installation
 
-To install this package, run:
+To install or update this package, run:
 
 ```bash
-pnpm add @reliverse/[package-name]
+pnpm add @reliverse/[package-name]@latest
 ```
 
 or with Bun:
 
 ```bash
-bun add @reliverse/[package-name]
+bun add @reliverse/[package-name]@latest
 ```
 
 ## How to Use This Library
